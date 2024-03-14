@@ -10,6 +10,8 @@
   --white-color: #ffffff;
   --line-height-base: 1.5;
   --font-size-base: 16px;
+  --container-max-width: 1158px;
+  --section-padding: 120px;
 }
 
 body {
@@ -17,6 +19,15 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: var(--font-size-base);
   color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -28,11 +39,29 @@ a {
 }
 
 ul {
-  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
 }
 
 *:focus {
   outline: none;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding: var(--section-padding) 0;
 }
 
 .visually-hidden {
@@ -98,6 +127,12 @@ ul {
   border-bottom: 1px solid var(--accent-color);
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo {
   font-family: 'Raleway';
   font-size: 18px;
@@ -115,6 +150,19 @@ ul {
   color: var(--primary-brand-color);
 }
 
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 76px;
+  padding: 24px 0;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .nav-menu__link {
   line-height: var(--line-height-base);
   font-weight: 500;
@@ -124,6 +172,12 @@ ul {
 
 .nav-menu__link:hover {
   color: var(--pressed-state-color);
+}
+
+.address-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .address-list__link {
@@ -137,14 +191,36 @@ ul {
 
 .footer {
   background-color: var(--dark-color);
+  padding: 100px 0;
 }
 
 .footer__text {
   color: var(--light-color);
+  max-width: 264px;
 }
 
 .hero-section {
   background-color: var(--dark-color);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer .logo {
+  margin-bottom: 16px;
+}
+
+.hero-section {
+  padding: 188px 0;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-section__title {
@@ -153,6 +229,15 @@ ul {
   line-height: 1.07143;
   font-weight: 700;
   letter-spacing: 0.02em;
+  max-width: 496px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .advantages-list__item-title {
@@ -161,6 +246,7 @@ ul {
   line-height: 1.2;
   font-weight: 500;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .about-title {
